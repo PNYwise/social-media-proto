@@ -18,7 +18,7 @@ message PostDetail {
 }
 
 message PostList {
-    repeated PostList PostDetail = 1;
+    repeated PostDetail PostDetail = 1;
 }
 
 
