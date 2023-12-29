@@ -11,7 +11,7 @@ message Location {
 }
 
 message PostDetail {
-    required string userUuid = 1;
+    string userUuid = 1;
     string caption = 2;
     string imageUrl = 3;
     Location location = 4;
