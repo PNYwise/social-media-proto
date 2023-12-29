@@ -6,7 +6,7 @@ import "google/protobuf/empty.proto";
 
 message Payload {
     required string serviceId = 1;
-    struct responseData = 2;
+    google.protobuf.struct responseData = 2;
 }
 
 service Config {

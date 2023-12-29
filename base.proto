@@ -3,5 +3,5 @@ syntax = "proto3";
 package social_media;
 
 message Uuid {
-    string uuid = 1;
+    required string uuid = 1;
 }
