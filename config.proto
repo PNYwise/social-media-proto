@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package social_media;
+import "google/protobuf/struct.proto";
+import "google/protobuf/empty.proto";
+
+message GetRequest {
+    string serviceId = 1;
+    struct responseData = 2;
+}
+
+message Payload {
+    string serviceId = 1;
+    struct responseData = 2;
+}
+
+message ServiceId {
+    string serviceId = 1;
+}
+
+service Config {
+    rpc Get(GetRequest) returns (Payload){};
+    rpc Set(Payload) returns (Payload){};
+    rpc Delete(ServiceId) returns (google.protobuf.Empty){};
+}
