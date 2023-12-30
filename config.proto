@@ -10,8 +10,8 @@ message Payload {
 }
 
 service Config {
-    rpc Get(Payload) returns (Payload){};
-    rpc Set(Payload) returns (Payload){};
-    rpc Update(Payload) returns (Payload){};
-    rpc Delete(Payload) returns (google.protobuf.Empty){};
+    rpc Get(google.protobuf.Empty) returns (Payload){};
+    rpc Set(google.protobuf.Value) returns (Payload){};
+    rpc Update(google.protobuf.Value) returns (Payload){};
+    rpc Delete(google.protobuf.Empty) returns (google.protobuf.Empty){};
 }
