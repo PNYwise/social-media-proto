@@ -4,14 +4,9 @@ package social_media;
 import "google/protobuf/struct.proto";
 import "google/protobuf/empty.proto";
 
-message Payload {
-    string serviceId = 1;
-    google.protobuf.Value config = 2;
-}
-
 service Config {
-    rpc Get(google.protobuf.Empty) returns (Payload){};
-    rpc Set(google.protobuf.Value) returns (Payload){};
-    rpc Update(google.protobuf.Value) returns (Payload){};
+    rpc Get(google.protobuf.Empty) returns (google.protobuf.Value){};
+    rpc Set(google.protobuf.Value) returns (google.protobuf.Value){};
+    rpc Update(google.protobuf.Value) returns (google.protobuf.Value){};
     rpc Delete(google.protobuf.Empty) returns (google.protobuf.Empty){};
 }
