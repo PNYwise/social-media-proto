@@ -11,10 +11,11 @@ message Location {
 }
 
 message PostDetail {
-    string userUuid = 1;
-    string caption = 2;
-    string imageUrl = 3;
-    Location location = 4;
+    string uuid = 1;
+    string userUuid = 2;
+    string caption = 3;
+    string imageUrl = 4;
+    Location location = 5;
 }
 
 message PostList {
