@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package social_media;
+import "google/protobuf/empty.proto";
+
+message LikeRequest {
+    string userUuid = 1;
+    string postUuid = 2;
+}
+
+
+message UserLikeResponse {
+    string userUuid = 1;
+    string name = 2;
+}
+
+message LikeResponse {
+    string postUuid = 1;
+    repeated UserLikeResponse userLikeResponse = 2;
+
+}
+
+service Like {
+    rpc Set (LikeRequest) returns (google.protobuf.Empty){};
+    rpc Unset (LikeRequest) returns (google.protobuf.Empty){};
+    rpc GetByPostUuid (Uuid) returns (LikeResponse){};
+}
