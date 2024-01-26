@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package social_media;
 import "google/protobuf/empty.proto";
+import "base.proto";
 
 message LikeRequest {
     string userUuid = 1;
