@@ -7,7 +7,7 @@ message Uuid {
 }
 
 message Pagination {
-    int totalRecord = 1;
-    int page = 2;
-    int totalPage = 3;
+    uint64 totalRecord = 1;
+    uint64 page = 2;
+    uint64 totalPage = 3;
 }
