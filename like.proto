@@ -9,6 +9,10 @@ message LikeRequest {
     string postUuid = 2;
 }
 
+message QueryLikeRequest {
+    string postUuid = 1;
+    int page = 2;
+}
 
 message UserLikeResponse {
     string userUuid = 1;
@@ -18,11 +22,11 @@ message UserLikeResponse {
 message LikeResponse {
     string postUuid = 1;
     repeated UserLikeResponse userLikeResponse = 2;
-
+    Pagination pagiation = 3;
 }
 
 service Like {
     rpc Set (LikeRequest) returns (google.protobuf.Empty){};
     rpc Unset (LikeRequest) returns (google.protobuf.Empty){};
-    rpc GetByPostUuid (Uuid) returns (LikeResponse){};
+    rpc GetByPostUuid (QueryLikeRequest) returns (LikeResponse){};
 }

@@ -5,3 +5,9 @@ package social_media;
 message Uuid {
     string uuid = 1;
 }
+
+message Pagination {
+    int totalRecord = 1;
+    int page = 2;
+    int totalPage = 3;
+}
