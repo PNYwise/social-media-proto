@@ -11,7 +11,7 @@ message LikeRequest {
 
 message QueryLikeRequest {
     string postUuid = 1;
-    int page = 2;
+    uint64 page = 2;
 }
 
 message UserLikeResponse {
