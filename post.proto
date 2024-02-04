@@ -26,5 +26,6 @@ message PostList {
 service Post {
     rpc Create (PostDetail) returns (PostDetail){};
     rpc ReadAllByUserId (Uuid) returns (PostList){};
+    rpc Exist (Uuid) returns (google.protobuf.BoolValue){};
     rpc Delete (Uuid) returns (google.protobuf.Empty){};
 }
