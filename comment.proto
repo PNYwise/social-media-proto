@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "base.proto";
+
+message CreateComment {
+    string userUuid = 1;
+    string postUuid = 2;
+    string text = 2;
+}
+
+message CommentResponse {
+    string uuid = 1;
+    string userUuid = 2;
+    string postUuid = 3;
+    string text = 4;
+}
+
+service Comment {
+    rpc GetByPostUuid(Uuid) returns (google.protobuf.Value){};
+}
