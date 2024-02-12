@@ -6,7 +6,7 @@ import "google/protobuf/empty.proto";
 message CreateComment {
     string userUuid = 1;
     string postUuid = 2;
-    string text = 2;
+    string text = 3;
 }
 
 message CommentResponse {
