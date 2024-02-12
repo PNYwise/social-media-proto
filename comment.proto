@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "base.proto";
+import "google/protobuf/empty.proto";
 
 message CreateComment {
     string userUuid = 1;
