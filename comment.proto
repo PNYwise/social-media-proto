@@ -1,7 +1,7 @@
 syntax = "proto3";
 
+package social_media;
 import "base.proto";
-import "google/protobuf/empty.proto";
 
 message CreateComment {
     string userUuid = 1;
@@ -17,5 +17,5 @@ message CommentResponse {
 }
 
 service Comment {
-    rpc GetByPostUuid(Uuid) returns (google.protobuf.Value){};
+    rpc GetCommentByPostUuid (Uuid) returns (CommentResponse){};
 }
