@@ -3,7 +3,6 @@ syntax = "proto3";
 import "base.proto";
 import "post.proto";
 import "google/protobuf/empty.proto";
-import "google/protobuf/wrappers.proto"; 
 
 package social_media;
 
