@@ -15,7 +15,7 @@ message PostDetail {
     string uuid = 1;
     string userUuid = 2;
     string caption = 3;
-    string imageUrl = 4;
+    repeated string imageUrl = 4;
     Location location = 5;
 }
 
