@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "base.proto";
 import "post.proto";
+import "user.proto";
 import "google/protobuf/empty.proto";
 
 package social_media;
@@ -12,4 +13,8 @@ service PostLogic {
     rpc DeletePostLogic (Uuid) returns (google.protobuf.Empty){};
     rpc Like (Uuid) returns (google.protobuf.Empty){};
     rpc Disslike (Uuid) returns (google.protobuf.Empty){};
+}
+
+service UserLogic {
+    rpc CreateUserLogic (UserDetail) returns (google.protobuf.Empty){};
 }

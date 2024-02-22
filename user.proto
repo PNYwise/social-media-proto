@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "base.proto";
+import "google/protobuf/timestamp.proto";
+
+package social_media;
+
+message UserDetail {
+    string uuid = 1;
+    string email = 2;
+    string username = 3;
+    string timezone = 4;
+    uint64 followers = 5;
+    uint64 following = 6;
+}
+
+service User {
+    rpc CreateUser(UserDetail) returns (UserDetail){};
+    rpc GetUserByUuid(UserDetail) returns (UserDetail){};
+}
