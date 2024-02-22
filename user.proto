@@ -16,5 +16,5 @@ message UserDetail {
 
 service User {
     rpc CreateUser(UserDetail) returns (UserDetail){};
-    rpc GetUserByUuid(UserDetail) returns (UserDetail){};
+    rpc GetUserByUuid(Uuid) returns (UserDetail){};
 }
